@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{52B9C554-2903-4299-8FF2-C91536E5E19C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9FAB0FB-82DD-458D-830C-46CDE8187C32}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Avtocentr297", "src\Avtocentr297\Avtocentr297.xproj", "{E2887893-AF79-45B0-AE83-02E8C6C6653A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2887893-AF79-45B0-AE83-02E8C6C6653A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2887893-AF79-45B0-AE83-02E8C6C6653A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2887893-AF79-45B0-AE83-02E8C6C6653A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2887893-AF79-45B0-AE83-02E8C6C6653A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2887893-AF79-45B0-AE83-02E8C6C6653A} = {52B9C554-2903-4299-8FF2-C91536E5E19C}
+	EndGlobalSection
+EndGlobal
