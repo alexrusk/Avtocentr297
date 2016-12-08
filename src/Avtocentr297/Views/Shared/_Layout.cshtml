@@ -3,11 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Avtocentr297</title>
+    <title>@ViewData["Title"] - Автоцентр на Барыкина</title>
+
+    jQuery('ul.nav > li').hover(function() {
+    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
+    }, function() {
+    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
+    })
+
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="@Url.Content("~/css/site.css")" />
+        <!--<link rel="stylesheet" href="~/css/site.css" />-->
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -18,6 +26,13 @@
     @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
 </head>
 <body>
+    <div class="page-header">
+        <h1>
+            Categories <small>
+                Add, edit and delete product categories</
+                small>
+        </h1>
+    </div>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -27,13 +42,41 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Avtocentr297</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ООО «Автоцентр на Барыкина»</a><p>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                 <!--   <img src="images/logo.jpg" width="50" height="50" alt="Логотип">-->
+                    <br>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+                    <li class="dropdown">
+                      <!--  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a> -->
+                        <a asp-area="" asp-controller="Home" asp-action="Service" class="dropdown-toggle" data-toggle="dropdown">Услуги<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Действие</a></li>
+                            <li><a href="#">Другое действие</a></li>
+                            <li><a href="#">Что-то еще</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Отдельная ссылка</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Еще одна отдельная ссылка</a></li>
+                        </ul>
+                    </li>
+                    <!--<li><a asp-area="" asp-controller="Home" asp-action="Service">Услуги</a></li>                    
+                    <div class="dropdown">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Service">Услуги</a></li>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Действие</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Другое действие</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Что-то еще</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Отдельная ссылка</a></li>
+                        </ul>
+                    </div>-->
+                    <li><a asp-area="" asp-controller="Home" asp-action="SpareParts">Запчасти</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Prices">Экскурс по ценам</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">О компании</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Контакты</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
@@ -43,7 +86,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2016 - Avtocentr297</p>
+            <p>&copy; 2016 - ООО «Автоцентр на Барыкина»</p>
         </footer>
     </div>
 

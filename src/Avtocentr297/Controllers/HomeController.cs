@@ -15,14 +15,18 @@ namespace Avtocentr297.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Информационная страница.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Свяжитесь с нами:";
+            ViewData["Address"] = "Наш адрес:";
+            ViewData["Working"] = "Мы работаем:";
+            ViewData["Phones"] = "Телефоны:";
+            ViewData["Email"] = "Email:";
 
             return View();
         }

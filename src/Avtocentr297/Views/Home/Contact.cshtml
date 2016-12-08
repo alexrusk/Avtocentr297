@@ -1,17 +1,35 @@
 ﻿@{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = "Контакты";
 }
 <h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
+<!--<h3>@ViewData["Message"]</h3>-->
+<h3>@ViewData["Address"]</h3>
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
+    246020, г. Гомель, ул. Барыкина, д. 297А<br />
+    <p>
+        <h3>@ViewData["Working"]</h3>
+        Автосервис: ежедневно с 08.00 до 20.00</br>
+        Отдел запасных частей: ежедневно с 08.00 до 20.00       
+    </p>
+    <p>
+        <h3>@ViewData["Phones"]</h3>
+        Автосервис: +375 232 46-09-33
+        <img src="~/images/phone.jpg" width="100" height="100" alt="Телефон"></br>
+                    + 375 44 746-09-33
+        <img src="~/images/check.jpg" width="100" height="100" alt="Птичка"></br>
+        Отдел запасных частей: +375 29 646-09-49
+        <img src="~/images/check.jpg" width="100" height="100" alt="Птичка"></br>
+        
+    </p>
+    <p>
+        <h3>@ViewData["Email"]</h3>
+    </p>
+  <!-- <abbr title="Телефон">Телефон:</abbr>
+    0232-11-22-333--> 
 </address>
 
 <address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+    <strong>Сервис:</strong> <a href="mailto:avtocentr297@yandex.by">avtocentr297@yandex.by</a><br />
+    <strong>Магазин:</strong> <a href="mailto:avtocentr297@yandex.by">mailto:avtocentr297@yandex.by</a>
 </address>

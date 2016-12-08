@@ -14,6 +14,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
+    <ApplicationInsightsResourceId>/subscriptions/9d9fd238-3e0a-4ec3-9f29-83e39380e259/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/Avtocentr297</ApplicationInsightsResourceId>
   </PropertyGroup>
   <ItemGroup>
     <DnxInvisibleContent Include="bower.json" />
