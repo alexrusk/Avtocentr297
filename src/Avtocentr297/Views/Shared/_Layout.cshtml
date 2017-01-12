@@ -11,36 +11,33 @@
         <!--<link rel="stylesheet" href="~/css/site.css" />-->
     </environment>
     <environment names="Staging,Production">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+     <!--   <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"-->
+              <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
     @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
+
 </head>
 
 
 <body>
+
     <div class="container">
-        <header>
+     <!--   <header>
             <h1>
-                <small>Автоцентр на Барыкина</small>
+                <small>ООО «Автоцентр на Барыкина»</small>
             </h1>
-        </header>
-        <section>
+        </header>-->
+       <!-- <section>-->
             <div class="top-left">
                       <div id="logo" class="col-xs-4 col-sm-3 col-md-3 hidden-sm hidden-xs"> 
-                <a href="index.html"><img src="images/logo.jpg" alt="logo"></a>
+                             <a href="home"><img src="~/images/logo1.jpg" alt="logos" height="100" width="350"></a>
                       </div> <!-- //logo -->
             </div>
-            <div class="col-sm-12 col-md-9">
-                <div class="top-right">
-                    <div class="newedge-date">
-                        <span>	Monday, 11 January 2016 </span>
-                    </div> <!-- //date -->
-                </div>
-            </div>
-        </section>
+
+     <!--   </section>-->
 
     </div>
 
@@ -48,47 +45,65 @@
             <div class="navbar navbar-default">
                 <div class="container">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<!--                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ООО «Автоцентр на Барыкина»</a>
+                       <!-- <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ООО «Автоцентр на Барыкина»</a>-->
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <!--   <img src="images/logo.jpg" width="50" height="50" alt="Логотип">-->
-                            <br>
+             
                             <li><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
                             <li class="dropdown">
                                 <!--  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a> -->
                                 <a asp-area="" asp-controller="Home" asp-action="Service" class="dropdown-toggle" data-toggle="dropdown">Услуги<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Действие</a></li>
-                                    <li><a href="#">Другое действие</a></li>
-                                    <li><a href="#">Что-то еще</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Отдельная ссылка</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Еще одна отдельная ссылка</a></li>
+                                    <li><a asp-area="" asp-controller="Service" asp-action="Diagnostics">Диагностика автомобиля</a></li>
+                                    <li><a asp-area="" asp-controller="Service" asp-action="TechService">Техническое обслуживание</a></li>
+                                    <li><a href="#">Ремонт</a></li>
+                                    <!--<li class="divider"></li>-->
+                                    <li><a href="#">Услуги автоэлектрика</a></li>
+                                    <li><a href="#">Компьютерный развал-схождение</a></li>
+                                    <li><a href="#">Система кондиционирования в салоне</a></li>
                                 </ul>
                             </li>
-                            <!--<li><a asp-area="" asp-controller="Home" asp-action="Service">Услуги</a></li>
-                            <div class="dropdown">
-                                <li><a asp-area="" asp-controller="Home" asp-action="Service">Услуги</a></li>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Действие</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Другое действие</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Что-то еще</a></li>
-                                    <li role="presentation" class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Отдельная ссылка</a></li>
+                            <li class="dropdown">
+                                <!--  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a> -->
+                                <a asp-area="" asp-controller="Home" asp-action="SpareParts" class="dropdown-toggle" data-toggle="dropdown">Запчасти<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <!--<li><a href="#">В наличии</a></li>-->
+                                    <li><a asp-area="" asp-controller="Service" asp-action="Stock">В наличии</a></li>
+                                    <li><a href="#">Заказ запчастей</a></li>
+                                    <li><a href="#">TITAN</a></li>
                                 </ul>
-                            </div>-->
-                            <li><a asp-area="" asp-controller="Home" asp-action="SpareParts">Запчасти</a></li>
-                            <li><a asp-area="" asp-controller="Home" asp-action="Prices">Экскурс по ценам</a></li>
-                            <li><a asp-area="" asp-controller="Home" asp-action="About">О компании</a></li>
-                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Контакты</a></li>
+                            </li>
+                            <li class="dropdown">
+                                <!--  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a> -->
+                                <a asp-area="" asp-controller="Home" asp-action="Prices" class="dropdown-toggle" data-toggle="dropdown">Экскурс по ценам<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Диагностика автомобиля</a></li>
+                                    <li><a href="#">ТО</a></li>
+                                    <li><a href="#">Ремонт</a></li>
+                                    <li><a href="#">Услуги автоэлектрика</a></li>
+                                    <li><a href="#">Компьютерный развал-схождение</a></li>
+                                    <li><a href="#">Система кондиционирования в салоне</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <!--  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a> -->
+                                <a asp-area="" asp-controller="Home" asp-action="About" class="dropdown-toggle" data-toggle="dropdown">О компании<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">История развития компании</a></li>
+                                    <li><a href="#">Команда сервиса</a></li>
+                                </ul>
+                            </li>
+
+                                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Контакты</a></li>
                         </ul>
                         @await Html.PartialAsync("_LoginPartial")
                     </div>
