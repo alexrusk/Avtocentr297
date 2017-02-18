@@ -17,6 +17,7 @@ namespace Avtocentr297.Controllers
         {
             return View();
         }
+
         public IActionResult Diagnostics()
         {
             ViewData["Title"] = "Диагностика автомобиля";

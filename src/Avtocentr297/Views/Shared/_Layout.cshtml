@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Автоцентр на Барыкина</title>
+    <title align="bottom">@ViewData["Title"] - Автоцентр на Барыкина</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -77,9 +77,9 @@
                                 <a asp-area="" asp-controller="Home" asp-action="SpareParts" class="dropdown-toggle" data-toggle="dropdown">Запчасти<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <!--<li><a href="#">В наличии</a></li>-->
-                                    <li><a asp-area="" asp-controller="Service" asp-action="Stock">В наличии</a></li>
+                                    <li><a asp-area="" asp-controller="SpareParts" asp-action="Stock">В наличии</a></li>
                                     <li><a href="#">Заказ запчастей</a></li>
-                                    <li><a href="#">TITAN</a></li>
+                                    <li><a asp-area="" asp-controller="SpareParts" asp-action="TITAN">TITAN</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -113,7 +113,7 @@
                 @RenderBody()
                 <hr />
                 <footer>
-                    <p>&copy; 2016 - ООО «Автоцентр на Барыкина»</p>
+                    <p align="bottom">&copy; 2017 - ООО «Автоцентр на Барыкина»</p>
                 </footer>
             </div>
 
