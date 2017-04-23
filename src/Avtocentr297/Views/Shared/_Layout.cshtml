@@ -25,19 +25,15 @@
 <body>
 
     <div class="container">
-     <!--   <header>
-            <h1>
-                <small>ООО «Автоцентр на Барыкина»</small>
-            </h1>
-        </header>-->
-       <!-- <section>-->
+
             <div class="top-left">
-                      <div id="logo" class="col-xs-4 col-sm-3 col-md-3 hidden-sm hidden-xs"> 
-                             <a href="home"><img src="~/images/logo1.jpg" alt="logos" height="100" width="350"></a>
+                     <!-- <div id="logo" class="col-xs-4 col-sm-3 col-md-3 hidden-sm hidden-xs"> -->
+        <div>
+            <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo1.jpg" alt="logo" height="100" width="350" align="left"></a>
+            <img src="~/images/Hours.png" alt="Время работы" height="75" width="400" align="middle"></a>
+                          <img src="~/images/Phones.png" alt="Телефоны и адрес" height="75" width="300" align="right"></a>
                       </div> <!-- //logo -->
             </div>
-
-     <!--   </section>-->
 
     </div>
 
@@ -86,15 +82,23 @@
                                 <!--  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a> -->
                                 <a asp-area="" asp-controller="Home" asp-action="Prices" class="dropdown-toggle" data-toggle="dropdown">Экскурс по ценам<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <!--<li><a href="#">Диагностика автомобиля</a></li>-->
-                                    <li><a asp-area="" asp-controller="Prices" asp-action="Diagnostics">Диагностика автомобиля</a></li>
-                                    <li><a asp-area="" asp-controller="Prices" asp-action="TechService">ТО</a></li> 
-                                    <li><a asp-area="" asp-controller="Prices" asp-action="Repair">Ремонт</a></li> 
-                                    <li><a asp-area="" asp-controller="Prices" asp-action="AutoElectricity">Услуги автоэлектрика</a></li>
-                                    <li><a asp-area="" asp-controller="Prices" asp-action="RazvalShozdenie">Компьютерный развал-схождение</a></li>
-                                    <li><a asp-area="" asp-controller="Prices" asp-action="Conditioning">Система кондиционирования в салоне</a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
+                                    <!--<li><a href="#">Диагностика автомобиля</a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>-->
+                                    <!--<li><a asp-area="" asp-controller="Prices" asp-action="Diagnostics">Диагностика автомобиля</a></li>
+                                    <!--<li><a asp-area="" asp-controller="Prices" asp-action="TechService">ТО</a></li> 
+                                        <li><a asp-area="" asp-controller="Prices" asp-action="Repair">Ремонт</a></li>
+                                        <li><a asp-area="" asp-controller="Prices" asp-action="AutoElectricity">Услуги автоэлектрика</a></li>
+                                        <li><a asp-area="" asp-controller="Prices" asp-action="RazvalShozdenie">Компьютерный развал-схождение</a></li>
+                                        <li><a asp-area="" asp-controller="Prices" asp-action="Conditioning">Система кондиционирования в салоне</a></li> -->  
+                                    
+                                    <li><a asp-area="" asp-controller="Prices" asp-action="Index" asp-fragment="diag">Диагностика автомобиля</a></li>
+                                    <li><a asp-area="" asp-controller="Prices" asp-action="Index" asp-fragment="techserv">ТО</a></li> 
+                                    <li><a asp-area="" asp-controller="Prices" asp-action="Index" asp-fragment="repair">Ремонт</a></li> 
+                                    <li><a asp-area="" asp-controller="Prices" asp-action="Index" asp-fragment="electro">Услуги автоэлектрика</a></li>
+                                    <li><a asp-area="" asp-controller="Prices" asp-action="Index" asp-fragment="razval">Компьютерный развал-схождение</a></li>
+                                    <li><a asp-area="" asp-controller="Prices" asp-action="Index" asp-fragment="condi">Система кондиционирования в салоне</a></li>
+                                    
                                 </ul>
                             </li>
                             <li class="dropdown">
