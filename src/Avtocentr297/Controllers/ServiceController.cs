@@ -34,7 +34,7 @@ namespace Avtocentr297.Controllers
 
         public IActionResult Repair()
         {
-            ViewData["Title"] = "Ремонт";
+            ViewData["Title"] = "Ремонт автомобиля";
             return View();
         }
 
