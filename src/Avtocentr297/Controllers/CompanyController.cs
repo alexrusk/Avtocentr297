@@ -15,6 +15,7 @@ namespace Avtocentr297.Controllers
         public IActionResult History()
         {
             ViewData["Title"] = "История развития компании";
+
             return View();
         }
 
